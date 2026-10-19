@@ -107,7 +107,11 @@
 -- ('2025-11-19',CURRENT_DATE,9,2,2),
 -- ('2025-11-10',CURRENT_DATE,10,1,1);
 
+-- INSERT INTO officer(name) VALUES
+-- ('Pirlo')
+-- UPDATE officer SET name = 'Nesta' WHERE id = 11
+-- DELETE FROM officer WHERE id =11;
 
 
-SELECT * FROM borrowing
+SELECT * FROM officer
 
