@@ -1,0 +1,113 @@
+-- LIBRARY SYSTEM
+-- CREATE DATABASE library_system
+-- CREATE TABLE category(
+--   id SERIAL PRIMARY KEY,
+--   name VARCHAR(80) NOT NULL UNIQUE
+-- );
+-- DROP TABLE category;
+-- CREATE TABLE category(
+--   id SERIAL PRIMARY KEY,
+--   name VARCHAR(80) NOT NULL UNIQUE
+-- );
+-- CREATE TABLE bookshelf(
+--   id SERIAL PRIMARY KEY,
+--   name VARCHAR(80) NOT NULL UNIQUE
+-- );
+-- INSERT INTO category(name) VALUES
+-- ('Novel'),
+-- ('Komik'),
+-- ('Biografi / Autobiografi'),
+-- ('Fantasi'),
+-- ('Romansa '),
+-- ('Misteri '),
+-- ('Fiksi Ilmiah'),
+-- ('Pengembangan Diri'),
+-- ('Sejarah'),
+-- ('Buku Anak');
+-- INSERT INTO bookshelf(name) VALUES
+-- ('Novel'),
+-- ('Komik'),
+-- ('Biografi / Autobiografi'),
+-- ('Fantasi'),
+-- ('Romansa '),
+-- ('Misteri '),
+-- ('Fiksi Ilmiah'),
+-- ('Pengembangan Diri'),
+-- ('Sejarah'),
+-- ('Buku Anak');
+-- CREATE TABLE book(
+--   id SERIAL PRIMARY KEY,
+--   name VARCHAR(80) NOT NULL,
+--   author VARCHAR(80) NOT NULL,
+--   publisher VARCHAR(80) NOT NULL,
+--   publication_year DATE NOT NULL,
+--   category_id INT REFERENCES category(id),
+-- );
+-- ALTER TABLE book ADD bookshelf_id INT REFERENCES bookshelf(id)
+-- INSERT INTO book(name,author,publisher,publication_year,category_id,bookshelf_id) VALUES
+-- ('Laskar Pelangi', 'Andrea Hirata', 'Bentang Pustaka', CURRENT_DATE, 1, 1),
+-- ('Naruto', 'Masashi', 'Shippuden', '1998-08-20', 2, 2),
+-- ('Islam ala Prabowo', 'Teddy', 'Seskab Gengs', '2026-07-29', 3, 3),
+-- ('The Witcher', 'Jokowi', 'Oslo Production', '2019-09-19', 4, 4),
+-- ('Prabroro & Teddy', 'William Shakespeare', 'Tragic Studio', '1965-06-05', 5, 5),
+-- ('Sherlock Holmes', 'Sir Arthur Conan Doyle', 'Bear Brand', '1980-08-08', 6, 6),
+-- ('Indonesia Maju', 'Ente Bahlul', 'Ethanol', '2025-02-05', 7, 7),
+-- ('Atomic Habits', 'AJames Clear', 'Revolutionary', '2010-10-10', 8, 8),
+-- ('Mahabarata', 'Gandhi', 'Anteve', '2010-10-10', 9, 9),
+-- ('Si Kancil', 'Atok', 'Pada Zaman Dahulu Prod.', '2020-10-20', 10, 10);
+-- CREATE TABLE officer(
+--   id SERIAL PRIMARY KEY,
+--   name VARCHAR(80)
+-- )
+-- INSERT INTO officer(name) VALUES
+-- ('Mbappe'),
+-- ('Ronaldo'),
+-- ('Messi'),
+-- ('Suarez'),
+-- ('Neymar'),
+-- ('Bale'),
+-- ('Benzema'),
+-- ('Salah'),
+-- ('Mane'),
+-- ('Firmino');
+-- CREATE TABLE borrower(
+--   id SERIAL PRIMARY KEY,
+--   name VARCHAR(80) NOT NULL,
+--   phone_number VARCHAR(20) NOT NULL UNIQUE,
+--   address VARCHAR
+-- )
+-- INSERT INTO borrower(name, phone_number, address) VALUES
+-- ('Maldini', '085576431298', 'Itali'),
+-- ('Vieira', '085576431648', 'Perancis'),
+-- ('Cruyff', '085509431298', 'Belanda'),
+-- ('Smeichel', '085576432398', 'Inggris'),
+-- ('Casillas', '085570931298', 'Spanyol'),
+-- ('Ronaldo', '089976431298', 'Brazil'),
+-- ('Batistuta', '085236431298', 'Argentina'),
+-- ('Forlan', '085576431278', 'Uruguai'),
+-- ('Aubameyang', '085576498298', 'Gabon'),
+-- ('Buffon', '009576431298', 'Itali');
+-- CREATE TABLE borrowing(
+--   id SERIAL PRIMARY KEY,
+--   book_borrowing_date DATE NOT NULL,
+--   book_return_date DATE NOT NULL,
+--   borrower_id INT REFERENCES borrower(id),
+--   officer_id INT REFERENCES officer(id),
+--   book_id INT REFERENCES book(id)
+-- )
+-- INSERT INTO borrowing(book_borrowing_date,book_return_date,borrower_id,officer_id,book_id)VALUES
+-- ('2025-11-11',CURRENT_DATE,1,10,10),
+-- ('2025-11-12',CURRENT_DATE,2,9,9),
+-- ('2025-11-13',CURRENT_DATE,3,8,8),
+-- ('2025-11-14',CURRENT_DATE,4,7,7),
+-- ('2025-11-15',CURRENT_DATE,5,6,6),
+-- ('2025-11-16',CURRENT_DATE,6,5,5),
+-- ('2025-11-17',CURRENT_DATE,7,4,4),
+-- ('2025-11-18',CURRENT_DATE,8,3,3),
+-- ('2025-11-19',CURRENT_DATE,9,2,2),
+-- ('2025-11-10',CURRENT_DATE,10,1,1);
+
+
+
+SELECT * FROM borrowing
+
