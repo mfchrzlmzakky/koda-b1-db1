@@ -30,9 +30,9 @@ BORROWER {
   string name
 }
 
-BORROWING ||--|| BOOK : has
-BORROWING ||--o{ OFFICER : has
-BORROWING ||--o{ BORROWER : has
+BORROWING }o--|| BOOK : allows
+BORROWING ||--o{ OFFICER : allows
+BORROWING ||--o{ BORROWER : allows
 BORROWING {
   int id PK
   date date
