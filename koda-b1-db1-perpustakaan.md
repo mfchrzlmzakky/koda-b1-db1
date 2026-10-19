@@ -31,13 +31,13 @@ BORROWER {
 }
 
 BORROWING ||--|| BOOK : has
-BORROWING }o--|| OFFICER : has 
-BORROWING }o--|| BORROWER : has 
+BORROWING ||--o{ OFFICER : has
+BORROWING ||--o{ BORROWER : has
 BORROWING {
   int id PK
   date date
   int borrower_id FK
-  int officer_id FK 
+  int officer_id FK
   int book_id FK
 }
 
